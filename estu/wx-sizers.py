@@ -12,8 +12,6 @@ class MyPanel(wx.Panel) :
 
         button = wx.Button(self, label='Presioname')
         button2 = wx.Button(self, label='Presioname a mi')
-        input_txt = wx.TextCtrl(self, size=(100,100 ))
-        input_txt.Bind()
 
         #sizers, basicamente, contenedores de otros widgets
         main_sizer = wx.BoxSizer(wx.HORIZONTAL) #se crea un sizer horizontal

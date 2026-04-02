@@ -5,7 +5,7 @@ class ImagePanel(wx.Panel) :
 
     def __init__(self, parent, image_size) :
         super().__init__(parent)
-        self.max_size = 400
+        self.max_size = 1000
 
         img = wx.Image(*image_size) #se pasa una tupla del ancho y alto. El * indica a python que se le pasara una tupla o array
         self.image_ctrl = wx.StaticBitmap(self, bitmap=wx.Bitmap(img))
@@ -32,7 +32,7 @@ class ImagePanel(wx.Panel) :
         Evento para navegar y buscar una imagen
         '''
 
-        wildcard = "JPEG files (*.jpg) | *.jpg" #esto permite decirle a python que tipo de arhcivos permitimos tomar.
+        wildcard = "JPEG files (*.jpg) | *.jpg" #esto permite decirle a python que tipo de archivos permitimos tomar.
         with wx.FileDialog(None, "Choose a file", style=wx.FD_OPEN) as dialog:
             if dialog.ShowModal() == wx.ID_OK :
                 self.photo_txt.SetValue(dialog.GetPath())

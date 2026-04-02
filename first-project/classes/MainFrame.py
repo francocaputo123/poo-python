@@ -5,7 +5,7 @@ class MainFrame(wx.Frame) :
 
     def __init__(self):
         super().__init__(None, title='Image viewer')
-        panel = ImagePanel(self, image_size=(400,400))
+        panel = ImagePanel(self, image_size=(1000,1000))
         self.Show()
 
 app = wx.App()
